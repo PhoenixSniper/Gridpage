@@ -30,4 +30,8 @@ function updateDate() {
 }
 
 // Run on page load
-document.addEventListener("DOMContentLoaded", updateDate);
+//document.addEventListener("DOMContentLoaded", updateDate);
+
+updateDate();
+
+setInterval(updateDate, 1000 * 60); 

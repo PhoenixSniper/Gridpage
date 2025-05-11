@@ -20,3 +20,14 @@ updateClock();
 
 // Then update it every second
 setInterval(updateClock, 1000);
+
+// Automatically set the current date
+function updateDate() {
+    const dateElement = document.getElementById("date");
+    const today = new Date();
+    const options = { month: "long", day: "numeric" };
+    dateElement.textContent = today.toLocaleDateString("en-US", options);
+}
+
+// Run on page load
+document.addEventListener("DOMContentLoaded", updateDate);
